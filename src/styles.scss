@@ -1,0 +1,92 @@
+@import '~bootstrap/scss/bootstrap';
+
+.f-30{
+  font-size: 30px!important;
+}
+.todo-container {
+  width: 450px;
+  max-width: 100%;
+  background-color: #313e5c;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.todo-header {
+  padding: 15px 20px;
+  color: #fff;
+
+  .todo-input {
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    padding: 0;
+    background: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+}
+
+.todo-list-container {
+  background-color: #3d496c;
+
+  .todo-item {
+    padding: 10px 20px;
+    border-bottom: 1px solid #455e8c;
+
+    .todo-inputlist {
+      border: 1px solid transparent;
+      color: #fff;
+      padding:5px 10px;
+      margin-left: 10px;
+      background: none;
+      font-weight: 600;
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: #536fa3;
+      }
+    }
+
+    .material-icons {
+      display: none;
+    }
+
+    &:hover {
+      .material-icons {
+        display: block;
+      }
+    }
+    &.todo-done {
+      position: relative;
+      .todo-inputlist{
+      opacity: .5;}
+      
+    }
+  }
+}
+
+.delete{
+  color: #fff;
+  &:hover {
+    color: #f85e45;
+  }
+}
+.add-text{
+  color: #25e7f4;
+  &:hover {
+    color:#9ae8ee;
+  }
+}
+
+
+.cursor-p {
+  cursor: pointer;
+}
+
+.cursor-p:hover {
+  opacity: .8;
+}

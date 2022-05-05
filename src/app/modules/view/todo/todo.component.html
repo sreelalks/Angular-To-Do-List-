@@ -1,0 +1,20 @@
+  <div class="todo-container mx-auto shadow-sm my-2 shadow-sm">
+  <div class="todo-header d-flex justify-content-between">
+    <input class="todo-input" #inputElementRef [value]="title"  placeholder="Type here.." >
+     <div class="pt-2">
+        <span class="material-icons md-48 cursor-p add-text  f-30"  (click)="submitValue(inputElementRef.value)">add_circle</span>    
+        <span class="material-icons md-48 cursor-p ms-3  f-30" (click)="sortList()">sort</span>
+     </div>  
+  </div>
+
+  <div class="my-2 todo-list-container">
+    <div class="todo-item  d-flex align-items-center "  *ngFor="let item of todoList; let i = index" [ngClass]="{'todo-done': item.status}">       
+      <input type="checkbox"  (click)="completeItem(i)" [checked]="item.status"/>
+      <input type="text" class="todo-inputlist" [value]="item.title" (change)="contentChange(i,$event)">
+       <span class="delete material-icons md-48 cursor-p ms-auto" (click)="removeTask(i)">delete</span> 
+    </div>
+  </div>
+</div>  
+
+ 
+ 
